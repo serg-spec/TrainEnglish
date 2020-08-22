@@ -1,0 +1,5 @@
+@startuml
+Subject }|--o{ WordForm
+Predicate ||--|{ WordForm
+Time ||--o{ WordForm
+@enduml

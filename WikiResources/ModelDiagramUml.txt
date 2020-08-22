@@ -1,0 +1,14 @@
+@startuml
+interface ISelectable
+ISelectable : IsSelected
+abstract class AbstractSelectable
+ISelectable <|.. AbstractSelectable
+AbstractSelectable <|-- SentenceType
+AbstractSelectable <|-- Predicate
+AbstractSelectable <|-- Time
+AbstractSelectable <|-- Subject
+Predicate "1"--"*" WordForm
+Time"1"--"*" WordForm
+Subject "1"--"*" Subject_WordForm_Link
+WordForm "1"-"*" Subject_WordForm_Link
+@enduml
